@@ -52,12 +52,13 @@ function filterFoods () {
 
   const lower = letter.toLowerCase()
   const matches = foods.filter(f => f.toLowerCase().startsWith(lower))
-  
+
   if (matches.length === 0) {
     render(`<p class="text-danger">No foods found starting with "<strong>${letter}</strong>"</p>`)
     return
   }
-
+//const upper = letter.toUpperCase()
+//const matchesU = foods.filter(f => f.toUpperCase().startsWith(upper))
 
   const list = matches.map(item => `<li class="list-group-item"> ${item}</li>`).join('')
 
